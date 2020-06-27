@@ -208,19 +208,6 @@ nav ul li a:hover{
   }
 }
 
-@media screen and (max-width:800px){
-  .chesmain{
-    position: relative;
-    background: url(../images/sp_header.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    overflow: hidden;
-  }
-}
-
 h2{
   width: 100%;
   text-align: center;
@@ -256,5 +243,24 @@ h2{
     font-weight: 100;
     font-size: 50px;
     line-height: 1.65em;
+  }
+}
+
+
+@media screen and (max-width:800px){
+  .chesmain{
+    position: relative;
+    background: url(../images/sp_header.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  h1{
+    position: absolute;
+    right: -2px;
+    top: 25px;
   }
 }
