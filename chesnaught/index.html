@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="chesnaught,ブリガロン,ぶりがろん">
-  <meta name="description"
-    content="さぁ、君もブリガロンを好きになろうか！！">
+  <meta name="description" content="さぁ、君もブリガロンを好きになろうか！！">
   <meta property="og:url" content="" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ぶりがろんノのーと！" />
-  <meta property="og:description"
-    content="さぁ、君もブリガロンを好きになろうか！！やっふー！やふやふやふややややふふふ！！" />
+  <meta property="og:description" content="さぁ、君もブリガロンを好きになろうか！！やっふー！やふやふやふややややふふふ！！" />
   <meta property="og:site_name" content="ぶりがろんノのーと！" />
   <meta property="og:image" content="https://reshinosan.github.io/chesnaught/images/thumbnail.jpg">
   <meta name="twitter:card" content="summary_large_image" />
@@ -20,6 +19,7 @@
   <link rel="stylesheet" href="css/common.css">
   <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="containerback">
     <div id="container"></div>
@@ -35,29 +35,46 @@
       <ul>
         <li><a href="#">とっぷ</a></li>
         <li><a href="#profile">ボクの名はね</a></li>
-        <li><a href="#">ずかんはこうだよ</a></li>
-        <li><a href="#">チェスノーとう</a></li>
+        <li><a href="#evolution">進化の流れ</a></li>
+        <li><a href="#">ずかんひょう</a></li>
       </ul>
     </nav>
     <a href="#profile" id="yazirushi"><span></span></a>
   </div>
-
-  <div class="profile">
+  <main>
     <h2 id="profile">▼　ボクの名はね　▼</h2>
-  </div>
+    <div class="profile">
+      <div class="thumbnails">
+        <h3>写真</h3>
+        <img src="images/thumbnail.jpg">
+        <p>※ブリガロン資料より</p>
+      </div>
+      <div class="borderonly"></div>
+      <div class="proftext">
+        <h3>名前</h3>
+        <div class="chestext">
+          <p>ブリガロン</p>
+          <p>くさ・かくとう</p>
+          <p>1.6 m</p>
+          <p>90.0 kg</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="evolution">▼　進化の流れ　▼</h2>
+  </main>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous">
-  </script>
+    crossorigin="anonymous">
+    </script>
   <!-- <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.js"></script> -->
   <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
   <script src="js/barcustmize.js"></script>
   <script>
     //スムーススクロール
-    $('a[href^="#"]').click(function() {
+    $('a[href^="#"]').click(function () {
       var speed = 500;
       var href = $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
+      var position = target.offset().top - 100;
       $('body,html').animate({
         scrollTop: position
       }, speed, 'swing');
@@ -65,4 +82,5 @@
     });
   </script>
 </body>
+
 </html>
