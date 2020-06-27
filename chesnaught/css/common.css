@@ -358,4 +358,16 @@ h3:after{
     right: -2px;
     top: 25px;
   }
+  .profile{
+    display: block;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .profile .thumbnails, .profile .proftext{
+    width: 100%;
+  }
+  .borderonly{
+    display: none;
+  }
 }
