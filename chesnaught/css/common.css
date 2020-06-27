@@ -8,7 +8,7 @@
 }
 
 body{
-  background: #000000;
+  background: #0e3b00;
   color: aliceblue;
   min-width: 350px;
 }
@@ -57,15 +57,20 @@ body{
 
 h1{
   position: absolute;
-  bottom: 100px;
-  width: 100%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
   text-align: center;
   /* background: rgba(0, 0, 0, .6); */
-  padding-bottom: 30px;
-  padding-top: 10px;
   font-family: 'はれのそら明朝';
   font-weight: 100;
-  font-size: 70px;
+  font-size: 150px;
+  border : 10px solid aliceblue;
+  letter-spacing: 6px;
 }
 
 nav{
@@ -203,5 +208,35 @@ nav ul li a:hover{
     background-position: center center;
     background-attachment: fixed;
     overflow: hidden;
+  }
+}
+
+h2{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  font-family: 'はれのそら明朝';
+  font-weight: 100;
+  font-size: 50px;
+}
+
+@media screen and (max-width:1500px){
+  h1{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background: rgba(0, 0, 0, .3);
+    font-family: 'はれのそら明朝';
+    font-weight: 100;
+    font-size: 80px;
+    border : 10px solid aliceblue;
+    letter-spacing: 6px;
   }
 }
