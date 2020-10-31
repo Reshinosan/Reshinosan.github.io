@@ -27,40 +27,43 @@
   <!-- <div class="topmain"> -->
 
   <!-- </div> -->
+  <nav>
+    <ul>
+      <li><a href="#">とっぷ</a></li>
+      <li><a href="#profile">どんなポケモン？</a></li>
+      <li><a href="#evolution">ずかんひょう</a></li>
+      <li><a href="#">ずかんひょう</a></li>
+    </ul>
+  </nav>
   <div class="chesmain">
     <div class="kuuhaku">
       <h1>ぶりがろんノのーと</h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">とっぷ</a></li>
-        <li><a href="#profile">ボクの名はね</a></li>
-        <li><a href="#evolution">進化の流れ</a></li>
-        <li><a href="#">ずかんひょう</a></li>
-      </ul>
-    </nav>
-    <a href="#profile" id="yazirushi"><span></span></a>
+    <a href="#profile" id="yazirushi">Scroll<span></span></a>
   </div>
   <main>
-    <h2 id="profile">▼　ボクの名はね　▼</h2>
+    <h2 id="profile">どんなポケモン？</h2>
     <div class="profile">
       <div class="thumbnails animate1">
         <h3>写真</h3>
         <img src="images/thumbnail.jpg">
         <p>※ブリガロン資料より</p>
       </div>
-      <div class="borderonly"></div>
+      <!-- <div class="borderonly"></div> -->
       <div class="proftext animate2">
         <h3>名前</h3>
         <div class="chestext">
-          <p>ブリガロン</p>
-          <p>くさ・かくとう</p>
-          <p>1.6 m</p>
-          <p>90.0 kg</p>
+          <p class="animate2">ブリガロン</p>
+          <p class="animate2">くさ・かくとう</p>
+          <p class="animate2">1.6 m</p>
+          <p class="animate2">90.0 kg</p>
         </div>
       </div>
     </div>
-    <h2 id="evolution">▼　進化の流れ　▼</h2>
+    <h2 id="evolution">ずかんひょう</h2>
+    <div class="zukan">
+      
+    </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
@@ -80,6 +83,18 @@
       }, speed, 'swing');
       return false;
     });
+    // メニュー固定
+    $(function() {
+    var offset = $('nav').offset();
+ 
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > offset.top) {
+            $('nav').addClass('fixeddesu');
+        } else {
+            $('nav').removeClass('fixeddesu');
+        }
+    });
+});
 
     //アニメーション
     window.sr = ScrollReveal();
