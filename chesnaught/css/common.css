@@ -142,8 +142,8 @@ nav ul li a:hover{
   color: aliceblue;
   position: absolute;
   margin: auto;
-  left: 50%;
-  right: 50%;
+  left: 0;
+  right: 0;
   bottom: 5%;
   z-index: 2;
   display: block;
@@ -310,7 +310,8 @@ h3:after{
   height: 100vh;
   background: url('../images/header.jpg');
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
+  overflow: hidden;
 }
 .zukan:before{
   position: absolute;
@@ -324,39 +325,57 @@ h3:after{
   .kuuhaku{
     position: absolute;
     margin: auto;
-    width: 300px;
-    height: 300px;
-  }  
-  h1{
-    position: absolute;
-    right: -2px;
-    top: 17px;
-    margin: auto;
-    width: 280px;
-    height: 280px;
-    text-align: center;
+    top: 0%;
+    bottom: 10%;
+    left: 50%;
+    right: 0%;
+    width: 400px;
+    height: 400px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    border-right : 5px solid aliceblue;
+    border-bottom : 5px solid aliceblue;
     /* background: rgba(0, 0, 0, .3); */
-    font-weight: 100;
-    font-size: 50px;
-    line-height: 1.65em;
+  }
+  
+  h1{
+    margin: auto;
+    text-align: center;
+    font-family: 'はれのそら明朝';
+    font-weight: 50;
+    font-size: 65px;
+    width: 360px;
+    height: 400px;
+    padding-left: 40px;
+    letter-spacing: 55px;
+    line-height: 1.9em;
+    border : 5px solid aliceblue;
   }
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:1000px){
+  .kuuhaku{
+    border: none;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
   .chesmain{
     position: relative;
     background: url(../images/sp_header.jpg);
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-position: center center;
+    background-position: left center;
     background-attachment: fixed;
     overflow: hidden;
   }
   h1{
     position: absolute;
-    right: -2px;
+    left: 0;
+    right: 0;
     top: 25px;
   }
   .profile{
@@ -370,5 +389,8 @@ h3:after{
   }
   .borderonly{
     display: none;
+  }
+  .zukan{
+    background-position: center center;
   }
 }
