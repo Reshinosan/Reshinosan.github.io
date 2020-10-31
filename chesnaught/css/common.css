@@ -19,20 +19,22 @@ body{
   z-index: 10;
   width: 100%;
   height: 100vh;
-  background: #0e3b00;
+  background: #000000;
 }
 
 /*-- loading bar --*/
 #container {
   position: fixed;
-  top: 0%;
-  width: 100%;
+  bottom: 0;
+  left: 25%;
+  top: 50%;
+  width: 50%;
   height: 8px;
 }
 
 .chesmain{
   position: relative;
-  background: url(../images/header.jpg);
+  background: url(../images/headerv2.jpg);
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -59,38 +61,49 @@ body{
 .kuuhaku{
   position: absolute;
   margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0%;
+  bottom: 10%;
+  left: 50%;
+  right: 0%;
   width: 400px;
   height: 400px;
-  border : 10px solid aliceblue;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  border-right : 5px solid aliceblue;
+  border-bottom : 5px solid aliceblue;
   /* background: rgba(0, 0, 0, .3); */
 }
 
 h1{
-  position: absolute;
-  right: 13px;
-  top: 13px;
   margin: auto;
   text-align: center;
   font-family: 'はれのそら明朝';
-  font-weight: 100;
-  font-size: 80px;
-  width: 350px;
-  height: 350px;
-  letter-spacing: 30px;
-  line-height: 1.5em;
+  font-weight: 50;
+  font-size: 65px;
+  width: 360px;
+  height: 400px;
+  padding-left: 40px;
+  letter-spacing: 55px;
+  line-height: 1.9em;
+  border : 5px solid aliceblue;
 }
+
+
 
 nav{
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, .6);
-  position: fixed;
+  position: absolute;
   z-index: 9999;
+  bottom: 0;
+}
+
+.fixeddesu{
+  position: fixed;
   top: 0;
+  height: 40px;
+  padding-bottom: 10px;
 }
 
 nav ul{
@@ -102,22 +115,24 @@ nav ul{
 
 nav ul li{
   width: 25%;
-  border-right: 1px dotted aliceblue;
-}
-
-nav ul li:last-child{
-  border-right: none;
 }
 
 nav ul li a{
+  display: block;
+  width: 100%;
+  height: auto;
   color: aliceblue;
   text-decoration: none;
+  text-align: center;
   font-family: 'はれのそら明朝';
   font-size: 22px;
+  z-index: 1;
+  /* padding-top: 5px; */
 }
 
 nav ul li a:hover{
   text-decoration: underline;
+  transition: all .3s;
 }
 
 /* 矢印 */
@@ -126,86 +141,57 @@ nav ul li a:hover{
   text-align: center;
   color: aliceblue;
   position: absolute;
-  bottom: 20px;
+  margin: auto;
   left: 50%;
   right: 50%;
+  bottom: 5%;
   z-index: 2;
-  display: inline-block;
+  display: block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   text-decoration: none;
-  padding-top: 60px;
+  padding-top: 70px;
+  font-size: 28px;
+  width: 200px;
 }
 #yazirushi span {
   position: absolute;
   top: 0;
   left: 50%;
-  right: 50%;
-  width: 46px;
-  height: 46px;
-  margin-left: -23px;
-  border: 1px solid #fff;
-  border-radius: 100%;
-  box-sizing: border-box;
-}
-#yazirushi span::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin: -12px 0 0 -8px;
+  width: 40px;
+  height: 40px;
+  margin-left: -15px;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  box-sizing: border-box;
-}
-#yazirushi span::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  content: '';
-  width: 44px;
-  height: 44px;
-  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
-  border-radius: 100%;
-  opacity: 0;
-  -webkit-animation: sdb 3s infinite;
-  animation: sdb 3s infinite;
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
   box-sizing: border-box;
 }
 @-webkit-keyframes sdb {
   0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
   }
-  30% {
+  50% {
     opacity: 1;
   }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-    opacity: 0;
-  }
   100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
 }
 @keyframes sdb {
   0% {
+    transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
   }
-  30% {
+  50% {
     opacity: 1;
   }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-    opacity: 0;
-  }
   100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
 }
@@ -277,8 +263,10 @@ h3:after{
 
 .profile .proftext p{
   position: relative;
+
+  z-index: 1;
   width: 50%;
-  border-bottom: 1px dotted aliceblue;
+  /* border-bottom: 1px dotted aliceblue; */
   padding-bottom: 20px;
   /* margin-left: 170px; */
   padding-left: 170px;
@@ -288,8 +276,10 @@ h3:after{
 
 .profile .proftext p:before{
   position: absolute;
-  right: 10px;
-  content: "▼";
+  content: "";
+  z-index: -1;
+  transform: skewX(45deg);
+  top: 0; bottom: 0; left: 0; right: 0;
 }
 
 .profile .proftext p:first-child:after{
@@ -313,18 +303,29 @@ h3:after{
   content: "体重：";
 }
 
+/* ずかんひょう */
+.zukan{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../images/header.jpg');
+  background-attachment: fixed;
+  background-size: 100%;
+}
+.zukan:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+ }
+
 @media screen and (max-width:1500px){
   .kuuhaku{
     position: absolute;
     margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 300px;
     height: 300px;
-    border : 7px solid aliceblue;
-    /* background: rgba(0, 0, 0, .3); */
   }  
   h1{
     position: absolute;
