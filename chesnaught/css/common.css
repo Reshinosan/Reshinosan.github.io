@@ -2,21 +2,21 @@
 
 @font-face
 {
-  font-family: 'はれのそら明朝';
+  font-family: "はれのそら明朝";
   src: url('https://cdn.leafscape.be/Harenosora/harenosora_web.woff2')
        format("woff2");
 }
 
 body{
-  background: #071d01;
+  background: #1d1201;
   color: aliceblue;
   min-width: 350px;
-  font-family: 'はれのそら明朝';
+  font-family: "はれのそら明朝";
 }
 
 .containerback{
   position: fixed;
-  z-index: 10;
+  z-index: 10000;
   width: 100%;
   height: 100vh;
   background: #000000;
@@ -60,50 +60,52 @@ body{
 
 .kuuhaku{
   position: absolute;
-  margin: auto;
-  top: 0%;
-  bottom: 10%;
-  left: 50%;
   right: 0%;
-  width: 400px;
-  height: 400px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  border-right : 5px solid aliceblue;
-  border-bottom : 5px solid aliceblue;
-  /* background: rgba(0, 0, 0, .3); */
+  bottom: 30%;
+  width: 50%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
 }
 
 h1{
-  margin: auto;
-  text-align: center;
-  font-family: 'はれのそら明朝';
-  font-weight: 50;
-  font-size: 65px;
-  width: 360px;
-  height: 400px;
-  padding-left: 40px;
-  letter-spacing: 55px;
-  line-height: 1.9em;
-  border : 5px solid aliceblue;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: normal;
+  line-height: 1.3em;
+  letter-spacing: 10px;
 }
 
+h1 .lovered{
+  color: rgb(255, 93, 93);
+  display: inline;
+  font-size: 70px;
+}
 
+/* .hamberger{
+  position: fixed;
+  z-index: 1000;
+  right: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+} */
 
 nav{
-  width: 100%;
+  width: 45%;
   text-align: center;
   background: rgba(0, 0, 0, .6);
   position: absolute;
   z-index: 9999;
+  right: 0;
   bottom: 0;
 }
 
 .fixeddesu{
   position: fixed;
   top: 0;
-  height: 40px;
-  padding-bottom: 10px;
+  height: 60px;
 }
 
 nav ul{
@@ -111,6 +113,7 @@ nav ul{
   list-style: none;
   display: flex;
   justify-content: space-around;
+  margin: 0;
 }
 
 nav ul li{
@@ -120,14 +123,15 @@ nav ul li{
 nav ul li a{
   display: block;
   width: 100%;
-  height: auto;
+  height: 20px;
   color: aliceblue;
   text-decoration: none;
   text-align: center;
-  font-family: 'はれのそら明朝';
+  font-family: "はれのそら明朝";
   font-size: 22px;
   z-index: 1;
-  /* padding-top: 5px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 nav ul li a:hover{
@@ -144,7 +148,7 @@ nav ul li a:hover{
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 5%;
+  bottom: 2%;
   z-index: 2;
   display: block;
   -webkit-transform: translate(0, -50%);
@@ -160,7 +164,7 @@ nav ul li a:hover{
   left: 50%;
   width: 40px;
   height: 40px;
-  margin-left: -15px;
+  margin-left: -20px;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   -webkit-transform: rotate(-45deg);
@@ -201,7 +205,7 @@ h2{
   text-align: center;
   padding-bottom: 30px;
   padding-top: 10px;
-  font-family: 'はれのそら明朝';
+  font-family: "はれのそら明朝";
   font-weight: 100;
   font-size: 50px;
 }
@@ -211,7 +215,7 @@ h3{
   text-align: center;
   width: 100%;
   font-weight: 100;
-  font-family: 'はれのそら明朝';
+  font-family: "はれのそら明朝";
   font-size: 40px;
   margin-bottom: 130px;
 }
@@ -232,33 +236,58 @@ h3:after{
 }
 
 .profile{
+  position: relative;
   display: flex;
   justify-content: space-around;
   margin: auto;
+  border: 5px solid aliceblue;
   width: 100%;
   max-width: 1300px;
+  height: 600px;
+  margin-top: 200px;
   margin-bottom: 100px;
+}
+
+.profile h2{
+  position: absolute;
+  left: -8%;
+  top: -5%;
+  transform: rotate(-20deg);
+  width: 450px;
+  z-index: 10;
+  background: #1d1201;
 }
 
 .profile img{
   width: 250px;
-  box-shadow: 30px 30px 0px 0px rgb(0, 19, 0);
+  box-shadow: 30px 30px 0px 0px rgba(19, 11, 0, 0.493);
   margin-bottom: 50px;
 }
 
 .profile .thumbnails{
   width: 50%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
 }
 
 .profile .borderonly{
   border-right: 1px dashed aliceblue;
-  height: 700px;
+  /* height: 700px; */
 }
 
 .profile .proftext{
-  position: relative;
+  /* position: absolute; */
   width: 50%;
+}
+
+.profile .proftext .chestext{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .profile .proftext p{
@@ -323,33 +352,11 @@ h3:after{
 
 @media screen and (max-width:1500px){
   .kuuhaku{
-    position: absolute;
-    margin: auto;
-    top: 0%;
-    bottom: 10%;
-    left: 50%;
-    right: 0%;
-    width: 400px;
-    height: 400px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    border-right : 5px solid aliceblue;
-    border-bottom : 5px solid aliceblue;
-    /* background: rgba(0, 0, 0, .3); */
+
   }
   
   h1{
-    margin: auto;
-    text-align: center;
-    font-family: 'はれのそら明朝';
-    font-weight: 50;
-    font-size: 65px;
-    width: 360px;
-    height: 400px;
-    padding-left: 40px;
-    letter-spacing: 55px;
-    line-height: 1.9em;
-    border : 5px solid aliceblue;
+
   }
 }
 
@@ -373,10 +380,7 @@ h3:after{
     overflow: hidden;
   }
   h1{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 25px;
+
   }
   .profile{
     display: block;
