@@ -41,6 +41,12 @@ h1{
     mix-blend-mode: difference;
 }
 
+.twittericon{
+    position: fixed;
+    left: 100px;
+    bottom: 80px;
+}
+
 main{
     background: rgba(230, 230, 230, 0.699);
     max-width: 1400px;
@@ -150,7 +156,7 @@ h2{
     content: "公開日:";
 }
 
-.lizamas a{
+a{
     position: absolute;
     right: 15px;
     display: table-cell;
@@ -166,10 +172,10 @@ h2{
     transition: all .3s;
 }
 
-.lizamas a:hover{
+a:hover{
     opacity: .8;
 }
 
-.lizamas a i{
+a i{
     padding-top: 10px;
 }
