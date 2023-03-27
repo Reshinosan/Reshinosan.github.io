@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
-@font-face
-{
-  font-family: "はれのそら明朝";
-  src: url('https://cdn.leafscape.be/Harenosora/harenosora_web.woff2')
-       format("woff2");
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
 
 body{
   background: #1d1201;
-  color: aliceblue;
+  color: rgb(233, 233, 233);
   min-width: 350px;
-  font-family: "はれのそら明朝";
+  font-family: "Product Sans";
 }
 
 .containerback{
@@ -59,26 +59,82 @@ body{
 }
 
 .kuuhaku{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin-top: 8%;
+}
+
+.kuuhaku .search_container{
+  box-sizing: border-box;
+  background: #eee;
+  position: relative;
+  border: 1px solid #999;
+  padding: 3px 5px;
+  border-radius: 50px;
+  /* height: 2.3em; */
+  width: 500px;
+  overflow: hidden;
+  font-size: 20px;
+  color: #333;
+}
+.kuuhaku .search_container input[type="text"]{
+  border: none;
+  height: 2.0em;
+  background: #eee;
+  width: 80%;
+  margin-left: -75px;
+  color: #333;
+}
+.kuuhaku .search_container input[type="text"]:focus {
+  outline: 0;
+}
+.kuuhaku .search_container input[type="submit"]{
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background: none;
+  color: #999;
   position: absolute;
-  right: 0%;
-  bottom: 30%;
-  width: 50%;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 10px;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -9px;
+  outline : none;
 }
 
 h1{
-  margin-bottom: 20px;
-  font-size: 50px;
+  /* margin-bottom: 20px; */
+  display: block;
+  width: 100%;
+  font-size: 120px;
   font-weight: normal;
   line-height: 1.3em;
-  letter-spacing: 10px;
+  /* letter-spacing: 10px; */
+  margin-bottom: 25px;
 }
 
 h1 .lovered{
   color: rgb(255, 93, 93);
   display: inline;
   font-size: 70px;
+}
+
+.ches_search{
+  width: 500px;
+  border-radius: 25px;
+  border: 0;
+  font-size: 22px;
+  padding: 8px;
+  padding-left: 16px;
+  color: #333;
 }
 
 /* .hamberger{
@@ -141,7 +197,7 @@ nav{
   background: rgba(0, 0, 0, .6);
   position: absolute;
   z-index: 9999;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 
