@@ -1,25 +1,33 @@
-window.addEventListener('DOMContentLoaded', ()=> {
-    // ①雪を発生させるコンテナを指定
-    const container = document.querySelector('.snow-container');
-  
-    // ②雪を生成する関数
-    const createSnow = () => {
-      const snowEl = document.createElement('span');
-      snowEl.className = 'snow';
-      const minSize = 5;
-      const maxSize = 10;
-      const size = Math.random() * (maxSize - minSize) + minSize;
-      snowEl.style.width = `${size}px`;
-      snowEl.style.height = `${size}px`;
-      snowEl.style.left = Math.random() * 100 + '%';
-      container.appendChild(snowEl);
-  
-      // 一定時間が経てば雪を消す
-      setTimeout(() => {
-        snowEl.remove();
-      }, 7000);
-    }
-  
-    // ③雪を生成する関数を一定間隔で呼び出す
-    setInterval(createSnow, 100);
+// ロード画面
+var bar = new ProgressBar.Line(container, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#FFF',
+    trailColor: '#eee',
+    trailWidth: 0.5,
+    svgStyle: {width: '100%', height: '100%'}
   });
+  bar.animate(1.0); 
+  
+  $(document).ready(function(){
+    setTimeout(function(){
+      $(".containerback").fadeOut('slow');
+    },1000);
+  });
+  
+
+// 検索処理
+const button1 = document.getElementById('start_search');
+button1.addEventListener('click', (e) => {
+  // デフォルトのイベントをキャンセル
+  e.preventDefault();
+
+  let inserted_text = document.getElementById('nyuryoku');
+  var inserted_text2 = inserted_text.value;
+  let set_text = document.getElementById('harituke');
+  set_text.value = inserted_text2;
+
+  document.search_ches.submit();
+
+});

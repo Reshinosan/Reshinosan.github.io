@@ -1,499 +1,497 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: 'Product Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-}
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 1280px;
+  }
 
 body{
-  background: #1d1201;
-  color: rgb(233, 233, 233);
-  min-width: 350px;
-  font-family: "Product Sans";
+    color: #EEE;
 }
 
+/* ローディング画面 */
 .containerback{
-  position: fixed;
-  z-index: 10000;
-  width: 100%;
-  height: 100vh;
-  background: #000000;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+  }
+  
+  /*-- loading bar --*/
+  #container {
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+    height: 8px;
+  }
+
+h1{
+    position: absolute;
+    font-family: "Noto Serif JP", serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 200;
+    font-style: normal;
+    font-size: 80px;
+    padding-right: 30px;
+    line-height: 1.75;
+    /* -ms-writing-mode: tb-rl; */
+    /* writing-mode: vertical-rl; */
+    top: 15%;
+    left: auto;
+    /* transform: translate(-50%, -50%); */
+    padding: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    /* color: #222; */
 }
 
-/*-- loading bar --*/
-#container {
-  position: fixed;
-  bottom: 0;
-  left: 25%;
-  top: 50%;
-  width: 50%;
-  height: 8px;
+/* ------------- ここから下部メニュー ------------- */
+.menulist{
+    position: fixed;
+    bottom: 10px;
+    list-style-type: none;
+    display: table;
+    color: #e9dcbe;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    padding-left: 0;
+    z-index: 9999;
 }
 
-.chesmain{
+.menulist:before{
+    position: absolute;
+    content: "";
+    bottom: -50px;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7),rgba(0,0,0,1));
+}
+
+.menulist li{
+    position: relative;
+    z-index: 3;
+    transition: all .3s;
+    width: 25%;
+    font-feature-settings: "liga" 0;
+    font-family: 'Playfair Display', serif;
+    display: table-cell;
+    border-left: 1px solid #ddd ;
+}
+
+.menulist li a{
+    font-size: 2vw;
+    transition: all .3s;
+    color: #e9dcbe;
+    text-decoration: none;
+    font-feature-settings: "liga" 0;
+}
+
+.menulist li a .niceclass1{
+    display: inline;
+}
+
+.menulist li a:hover{
+    letter-spacing: 6px;
+}
+
+.menulist li:first-child{
+    border-left: none; 
+}
+
+/* ------------- ここまで下部メニュー ------------- */
+
+
+main{
+    position: relative;
+    /* z-index: -2; */
+    width: 100%;
+    height: 100vh;
+    background: url('../images/bg.jpg') 90% 0%;
+    background-repeat: repeat-x;
+    -webkit-animation: bgscroll 150s linear infinite;
+    animation: bgscroll 150s linear infinite;
+}
+
+@-webkit-keyframes bgscroll{
+  0%{
+    background-position: 0 0;
+  }
+  
+  100%{
+    background-position: -1920px 0;
+  }
+}
+
+@keyframes bgscroll{
+  0%{
+    background-position: 0 30px;
+  }
+  
+  100%{
+    background-position: -1920px 30px ;
+  }
+}
+
+canvas {
+  display: block;
   position: relative;
-  background-image: url(../images/Swampert2.png), url(../images/Swampert1.jpg);
+  z-index: -10000;
   width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
+  height: 100%;
+}
+
+main .bg-sea{
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(#1f68c6, #1778d9, #83c5e5);
+  width: 100%;
+  height: 300px;
   overflow: hidden;
 }
 
-.chesmain:before{
- position: absolute;
- content: "";
- width: 100%;
- height: 100vh;
- background: rgba(0, 0, 0, .3);
-}
-
-.topmain{
+main .bg-sea::after{
   position: absolute;
-  bottom: 150px;
+  content: "";
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  height: 20px;
+  background: linear-gradient(#6e829c, #1f68c6);
 }
 
-.kuuhaku{
+main img.syozi_left{
+    position: absolute;
+    left: -100px;
+    z-index: 3;
+}
+
+main img.syozi_right{
+    position: absolute;
+    right: -100px;
+    z-index: 3;
+}
+
+main img.saku{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+main .yane{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #19191d;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+main .yane:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 90px;
+    width: 100%;
+    height: 10px;
+    background: #252421;
+}
+
+main .div_ches{
+  position: absolute;
+  z-index: 2;
+  width: 850px;
+  margin: auto auto 0 auto;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .model_ches{
   position: relative;
-  margin: auto;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  width: 825px;
+  height: 850px;
+  z-index: 2;
+}
+
+main .model_ches_hand{
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
-  margin-top: 8%;
+  animation-name: angle_hand;
+  animation-duration: 2.5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:ease-in-out;
+  animation-direction: alternate;
 }
 
-.kuuhaku .search_container{
+
+@keyframes angle_hand{
+  0%{
+      transform: rotate(1deg);
+  }
+  100%{
+      transform: rotate(8deg);
+  }
+}
+
+.search_container{
   box-sizing: border-box;
-  background: #eee;
-  position: relative;
-  border: 1px solid #999;
+  background: rgba(51, 51, 51, 0.46);
+  position: absolute;
+  z-index: 100;
+  top: 375px;
+  left: 50%;
+  border: 1px solid #bbb;
   padding: 3px 5px;
   border-radius: 50px;
-  /* height: 2.3em; */
+  height: 2.3em;
   width: 500px;
   overflow: hidden;
   font-size: 20px;
   color: #333;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 5px 1px #555;
 }
-.kuuhaku .search_container input[type="text"]{
+
+.search_container input[type="text"] {
   border: none;
   height: 2.0em;
-  background: #eee;
-  width: 80%;
-  margin-left: -75px;
-  color: #333;
+  background: rgba(0,0,0,0);
+  width: 85%;
+  margin-left: 15px;
+  color: #fff;
 }
-.kuuhaku .search_container input[type="text"]:focus {
+
+.search_container input[type="text"]:focus {
   outline: 0;
 }
-.kuuhaku .search_container input[type="submit"]{
+
+.search_container input[type="submit"] {
   cursor: pointer;
   font-family: FontAwesome;
   font-size: 1.3em;
   border: none;
   background: none;
-  color: #999;
+  color: #fff;
   position: absolute;
-  width: 2.5em;
-  height: 2.5em;
-  right: 0;
-  top: -9px;
-  outline : none;
+  width: 2em;
+  height: 1.75em;
+  right: 5px;
+  top: 0px;
+  outline: none;
 }
 
-h1{
-  /* margin-bottom: 20px; */
-  display: block;
-  width: 100%;
-  font-size: 120px;
-  font-weight: normal;
-  line-height: 1.3em;
-  /* letter-spacing: 10px; */
-  margin-bottom: 25px;
+.hurin-suzu {
+    position: relative;
+    width: 150px;
+    margin-left: 33%;
+    z-index: 1;
+    animation-name: suzuanimation;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+}
+  
+.hurin-suzu .suzu-circle {
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(#aab35b, #ffcdcd00);
+    border-radius: 40% 40% 40% 40% / 60% 60% 30% 30%;
+    position: relative;
+}
+  
+.hurin-suzu .suzu-circle::before {
+    width: 95px;
+    height: 15px;
+    content: '';
+    border: solid 3px #866c22;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
 }
 
-h1 .lovered{
-  color: rgb(255, 93, 93);
-  display: inline;
-  font-size: 70px;
+.suzu-huda {
+    width: 50px;
+    height: 200px;
+    background: #518f63;
+    margin: 0 auto;
+    position: relative;
+    transform: skew(-3deg, -5deg) translate(-30px);
+}
+  
+.suzu-huda::before {
+    width: 50px;
+    content: '';
+    border-top: 2px solid #866c22;
+    position: absolute;
+    top: -7px;
+    transform: rotate(93deg);
 }
 
-.ches_search{
-  width: 500px;
-  border-radius: 25px;
-  border: 0;
-  font-size: 22px;
-  padding: 8px;
-  padding-left: 16px;
-  color: #333;
+@keyframes suzuanimation{
+    0%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
 }
 
-/* .hamberger{
-  position: fixed;
-  z-index: 1000;
-  right: 30px;
-  top: 30px;
-  width: 70px;
-  height: 70px;
-  background: #fff;
-  border-radius: 50%;
-} */
+/* ------------- ここから落ち葉 ------------- */
 
-/* ===== 雪を表示するコンテナのスタイル ===== */
-.snow-container {
-  position: relative;
-
-  height: 100vh; 
-  /* コンテナの高さ */
-  width: 100%;
-  /* コンテナの横幅 */
-  overflow: hidden;
-
-  background-color: #000; 
-  /* コンテナの背景 */
-}
-
-/* ===== 雪のスタイル ===== */
-.snow {
-  background-color: rgb(207, 207, 207); /* 雪の色 */
-  border-radius: 50%;
+.leaf {
   position: absolute;
-  animation: animate-snow 7s linear;
-}
-
-/* ===== 雪のアニメーション ===== */
-@keyframes animate-snow {
-  0% {
-    opacity: 0;
-    top: -10px;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    top: 100vh;
-  }
-}
-
-nav{
-  width: 45%;
-  text-align: center;
-  background: rgba(0, 0, 0, .6);
-  position: absolute;
-  z-index: 9999;
-  left: 0;
-  bottom: 0;
-}
-
-.fixeddesu{
-  position: fixed;
-  top: 0;
-  height: 60px;
-}
-
-nav ul{
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
+  z-index: 0;
+  padding: 0;
   margin: 0;
-}
-
-nav ul li{
-  width: 25%;
-}
-
-nav ul li a{
-  display: block;
   width: 100%;
-  height: 20px;
-  color: aliceblue;
-  text-decoration: none;
-  text-align: center;
-  font-family: "はれのそら明朝";
-  font-size: 22px;
-  z-index: 1;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-nav ul li a:hover{
-  text-decoration: underline;
-  transition: all .3s;
-}
-
-/* 矢印 */
-
-#yazirushi {
-  text-align: center;
-  color: aliceblue;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 2%;
-  z-index: 2;
-  display: block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  text-decoration: none;
-  padding-top: 70px;
-  font-size: 28px;
-  width: 200px;
-}
-#yazirushi span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: -20px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
-  box-sizing: border-box;
-}
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-@keyframes sdb {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-
-h2{
-  width: 100%;
-  text-align: center;
-  padding-bottom: 30px;
-  padding-top: 10px;
-  font-family: "はれのそら明朝";
-  font-weight: 100;
-  font-size: 50px;
-}
-
-h3{
-  position: relative;
-  text-align: center;
-  width: 100%;
-  font-weight: 100;
-  font-family: "はれのそら明朝";
-  font-size: 40px;
-  margin-bottom: 130px;
-}
-
-h3:after{
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transform: rotate(45deg);
-  z-index: -3;
-  content: "";
-  width: 120px;
-  height: 120px;
-  background: #103505;
-}
-
-.profile{
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  border: 5px solid aliceblue;
-  width: 100%;
-  max-width: 1300px;
-  height: 600px;
-  margin-top: 200px;
-  margin-bottom: 100px;
-}
-
-.profile h2{
-  position: absolute;
-  left: -8%;
-  top: -5%;
-  transform: rotate(-20deg);
-  width: 450px;
-  z-index: 10;
-  background: #1d1201;
-}
-
-.profile img{
-  width: 250px;
-  box-shadow: 30px 30px 0px 0px rgba(19, 11, 0, 0.493);
-  margin-bottom: 50px;
-}
-
-.profile .thumbnails{
-  width: 50%;
-  text-align: center;
+  height: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  flex: 1;
   align-items: center;
 }
 
-.profile .borderonly{
-  border-right: 1px dashed aliceblue;
-  /* height: 700px; */
-}
-
-.profile .proftext{
-  /* position: absolute; */
-  width: 50%;
-}
-
-.profile .proftext .chestext{
+.leaf li{
   position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-
-.profile .proftext p{
-  position: relative;
-
-  z-index: 1;
-  width: 50%;
-  /* border-bottom: 1px dotted aliceblue; */
-  padding-bottom: 20px;
-  /* margin-left: 170px; */
-  padding-left: 170px;
-  font-size: 32px;
-  margin: 42px auto;
-}
-
-.profile .proftext p:before{
-  position: absolute;
-  content: "";
+  list-style: none;
+  top: -50px;
+  background: #ffaf47;
+  border-radius: 0% 70%;
   z-index: -1;
-  transform: skewX(45deg);
-  top: 0; bottom: 0; left: 0; right: 0;
-}
-
-.profile .proftext p:first-child:after{
-  position: absolute;
-  left: 0;
-  content: "名前：";
-}
-.profile .proftext p:nth-child(2):after{
-  position: absolute;
-  left: 0;
-  content: "タイプ：";
-}
-.profile .proftext p:nth-child(3):after{
-  position: absolute;
-  left: 0;
-  content: "身長：";
-}
-.profile .proftext p:nth-child(4):after{
-  position: absolute;
-  left: 0;
-  content: "体重：";
-}
-
-/* ずかんひょう */
-.zukan{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('../images/header.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  overflow: hidden;
-}
-.zukan:before{
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, .7);
- }
-
-@media screen and (max-width:1500px){
-  .kuuhaku{
-
-  }
-  
-  h1{
-
-  }
 }
 
 
-@media screen and (max-width:1000px){
-  .kuuhaku{
-    border: none;
-    width: 100%;
-    margin: auto;
-    left: 0;
-    right: 0;
+@keyframes fall {
+  to {
+    top: 120%;
   }
-  .chesmain{
-    position: relative;
-    background: url(../images/sp_header.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: left center;
-    background-attachment: fixed;
-    overflow: hidden;
-  }
-  h1{
+}
 
+@keyframes sway1 {
+  from {
+    transform: translateX(0px) rotate(0deg);
   }
-  .profile{
-    display: block;
-    margin: auto;
-    width: 100%;
-    margin-bottom: 100px;
+  to {
+    transform: translateX(200px) rotate(-45deg);
   }
-  .profile .thumbnails, .profile .proftext{
-    width: 100%;
+}
+
+@keyframes sway2 {
+  from {
+    transform: translateX(200px) rotate(-45deg);
   }
-  .borderonly{
-    display: none;
+  to {
+    transform: translateX(0px) rotate(0deg);
   }
-  .zukan{
-    background-position: center center;
-  }
+}
+
+.leaf li:nth-child(1){
+  left: 0%;
+  top: -60px;
+  width: 60px;
+  height: 38px;
+  background-color: #ffbf00;
+  animation: fall 10s linear infinite,
+             sway1 3s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+
+.leaf li:nth-child(2){
+  left: 5%;
+  top: -70px;
+  width: 50px;
+  height: 29px;
+  background-color: #992400;
+  animation: fall 15s linear infinite,
+             sway1 2s ease-in-out infinite alternate;
+  animation-delay: 8s;
+}
+
+.leaf li:nth-child(3){
+  left: 15%;
+  top: -50px;
+  width: 36px;
+  height: 20px;
+  background-color: #c2704e;
+  animation: fall 9s linear infinite,
+             sway1 3.5s ease-in-out infinite alternate;
+  animation-delay: 13s;
+}
+
+.leaf li:nth-child(4){
+  left: 30%;
+  top: -70px;
+  width: 51px;
+  height: 42px;
+  background-color: #ffbf00;
+  animation: fall 8s linear infinite,
+             sway2 4s ease-in-out infinite alternate;
+  animation-delay: 7s;
+}
+.leaf li:nth-child(5){
+  left: 40%;
+  top: -60px;
+  width: 46px;
+  height: 40px;
+  animation: fall 10s linear infinite,
+             sway1 4s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+.leaf li:nth-child(6){
+  left: 55%;
+  top: -50px;
+  width: 54px;
+  height: 35px;
+  background-color: #631d08;
+  animation: fall 11s linear infinite,
+             sway2 3s ease-in-out infinite alternate;
+  animation-delay: 3s;
+}
+.leaf li:nth-child(7){
+  left: 65%;
+  top: -40px;
+  width: 46px;
+  height: 35px;
+  animation: fall 7s linear infinite,
+             sway2 3.5s ease-in-out infinite alternate;
+  animation-delay: 7s;
+}
+.leaf li:nth-child(8){
+  left: 50%;
+  top: -60px;
+  width: 43px;
+  height: 29px;
+  background-color: #c2704e;
+  animation: fall 7s linear infinite,
+             sway1 3s ease-in-out infinite alternate;
+  animation-delay: 3s;
+}
+.leaf li:nth-child(9){
+  left: 80%;
+  top: -70px;
+  width: 56px;
+  height: 35px;
+  animation: fall 10s linear infinite,
+             sway2 4s ease-in-out infinite alternate;
+  animation-delay: 4s;
+}
+
+@media screen and (max-width: 420px){
+
 }
