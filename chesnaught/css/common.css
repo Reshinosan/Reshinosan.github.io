@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(./qhd_common.css) screen and (max-width: 2560px) and (min-height: 2000px);
 
 html {
     width: 100%;
@@ -17,7 +18,7 @@ body{
     z-index: 10000;
     width: 100%;
     height: 100vh;
-    background: #000000;
+    background: rgba(0,0,0,.5);
   }
   
   /*-- loading bar --*/
@@ -108,10 +109,9 @@ h1{
 
 main{
     position: relative;
-    /* z-index: -2; */
     width: 100%;
     height: 100vh;
-    background: url('../images/bg.jpg') 90% 0%;
+    background: url('../images/bg_fhd.jpg') 90% 0%;
     background-repeat: repeat-x;
     -webkit-animation: bgscroll 150s linear infinite;
     animation: bgscroll 150s linear infinite;
@@ -137,20 +137,12 @@ main{
   }
 }
 
-canvas {
-  display: block;
-  position: relative;
-  z-index: -10000;
-  width: 100%;
-  height: 100%;
-}
-
 main .bg-sea{
   position: absolute;
   bottom: 0;
   background: linear-gradient(#1f68c6, #1778d9, #83c5e5);
   width: 100%;
-  height: 300px;
+  height: 270px;
   overflow: hidden;
 }
 
@@ -162,22 +154,85 @@ main .bg-sea::after{
   background: linear-gradient(#6e829c, #1f68c6);
 }
 
+main img.syozi_left,
+main img.syozi_right,
+main img.load_syozi_left,
+main img.load_syozi_right{
+  width: 25%;
+  height: 100vh;
+  /* min-width: 30%; */
+}
+
 main img.syozi_left{
-    position: absolute;
-    left: -100px;
-    z-index: 3;
+  position: absolute;
+  left: 0px;
+  z-index: 10;
 }
 
 main img.syozi_right{
-    position: absolute;
-    right: -100px;
-    z-index: 3;
+  position: absolute;
+  right: 0px;
+  z-index: 10;
 }
 
-main img.saku{
+main img.load_syozi_left{
+  position: absolute;
+  left: calc(25vw);
+  z-index: 9;
+}
+
+main img.load_syozi_right{
+  position: absolute;
+  right: calc(25vw);
+  z-index: 9;
+}
+
+main .move_l_shozi1,
+main .move_r_shozi1{
+  position: absolute;
+  animation-duration: 1s;
+  animation-timing-function:ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode:forwards;
+}
+
+main .move_l_shozi1{
+  animation-name: leftoutshozi1;
+}
+
+main .move_r_shozi1{
+  animation-name: rightoutshozi1;
+}
+
+@keyframes leftoutshozi1{
+  100%{
+    left: -100px;
+  }
+}
+
+@keyframes rightoutshozi1{
+  100%{
+    right: -100px;
+  }
+}
+
+main .bg_fillter{
+  position: fixed;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: block;
+}
+
+main .saku{
     position: absolute;
     bottom: 0;
-    z-index: 1;
+    z-index: 6;
+    background: url('../images/saku.png') repeat-x;
+    width: 100%;
+    height: 350px;
 }
 
 main .yane{
@@ -203,18 +258,15 @@ main .yane:after{
 
 main .div_ches{
   position: absolute;
-  z-index: 2;
-  width: 850px;
+  z-index: 7;
   margin: auto auto 0 auto;
-  top: 60%;
+  bottom: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 10%);
 }
 
 main .model_ches{
   position: relative;
-  width: 825px;
-  height: 850px;
   z-index: 2;
 }
 
@@ -245,7 +297,7 @@ main .model_ches_hand{
   background: rgba(51, 51, 51, 0.46);
   position: absolute;
   z-index: 100;
-  top: 375px;
+  top: 43vh;
   left: 50%;
   border: 1px solid #bbb;
   padding: 3px 5px;

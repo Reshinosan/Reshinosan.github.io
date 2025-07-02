@@ -13,6 +13,10 @@ var bar = new ProgressBar.Line(container, {
   $(document).ready(function(){
     setTimeout(function(){
       $(".containerback").fadeOut('slow');
+      $(".syozi_left").addClass('move_l_shozi1');
+      $(".syozi_right").addClass('move_r_shozi1');
+      $(".load_syozi_left").addClass('move_l_shozi1');
+      $(".load_syozi_right").addClass('move_r_shozi1');
     },1000);
   });
   

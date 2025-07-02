@@ -6,7 +6,8 @@
     <meta name="robots" content="noindex" />
     <title>ぶりがろん！</title>
     <link href="./css/normalize.css" rel="stylesheet" />
-    <link href="./css/common.css?2024101801" rel="stylesheet" />
+    <link href="./css/common.css?2025070201" rel="stylesheet" />
+    <link href="./css/qhd_common.css?2025070201" rel="stylesheet" media="screen and (min-width:2000px)" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,26 +19,30 @@
     <div class="containerback">
         <div id="container"></div>
     </div>
+    <!-- 本記事 -->
     <main>
+        <div class="bg_fillter"></div>
         <img class="syozi_left" src="./images/syouzi.jpg">
         <img class="syozi_right" src="./images/syouzi.jpg">
+        <img class="load_syozi_left" src="./images/syouzi.jpg">
+        <img class="load_syozi_right" src="./images/syouzi.jpg">
         <div class="bg-sea"></div>
-        <img class="saku" src="./images/saku.png">
+        <div class="saku"></div>
         <h1>また会えたね。おかえり。</h1>
         <div class="yane"></div>
         <div class="div_ches">
             <img src="./images/Chesnaught.png" class="model_ches" />
             <img src="./images/Chesnaught_hand.png" class="model_ches_hand" />
         </div>
-        <form method="get" action="https://www.google.com/search" class="search_container" id="search_value" name="search_ches">
-            <input type="text" id="nyuryoku" size="" placeholder="">
-            <input type="hidden" id="harituke" name="q"  value="" />
-            <input type="submit" value="&#xf002" id="start_search">
-          </form>
         <div class="hurin-suzu">
             <div class="suzu-circle"></div>
             <div class="suzu-huda"></div>
         </div>
+        <form method="get" action="https://www.google.com/search" class="search_container" id="search_value" name="search_ches">
+            <input type="text" id="nyuryoku" size="" placeholder="">
+            <input type="hidden" id="harituke" name="q"  value="" />
+            <input type="submit" value="&#xf002" id="start_search">
+        </form>
     </main>
     <ul class="menulist">
         <li><a href="https://deck.blue/" class="animsition-link"><div class="niceclass1">Blue </div>Sky</a></li>
@@ -48,7 +53,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
-    <script src="./js/main.js?2024101801"></script>
+    <script src="./js/main.js?2025070201"></script>
 
 </body>
 </html>
