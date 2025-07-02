@@ -166,25 +166,25 @@ main img.load_syozi_right{
 main img.syozi_left{
   position: absolute;
   left: 0px;
-  z-index: 10;
+  z-index: 9;
 }
 
 main img.syozi_right{
   position: absolute;
   right: 0px;
-  z-index: 10;
+  z-index: 9;
 }
 
 main img.load_syozi_left{
   position: absolute;
   left: calc(25vw);
-  z-index: 9;
+  z-index: 10;
 }
 
 main img.load_syozi_right{
   position: absolute;
   right: calc(25vw);
-  z-index: 9;
+  z-index: 10;
 }
 
 main .move_l_shozi1,
