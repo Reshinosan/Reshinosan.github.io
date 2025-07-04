@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+main{
+    background: url('../images/bg_mobile.jpg');
+    background-size: auto 100%;
+}
+
+
+.menulist{
+  display: flex;
+  justify-content: space-around;
+  flex: 2;
+  flex-wrap: wrap;
+  bottom: 0;
+}
+
+.menulist li{
+    width: 49%;
+    border-left: 0px solid #ddd ;
+}
+
+.menulist li:nth-child(2n-1){
+  border-right: 1px solid #ddd ;
+}
+
+.menulist li a{
+    font-size: 25px;
+}
+
+@-webkit-keyframes bgscroll{
+    0%{
+      background-position: 0 0;
+    }
+    
+    100%{
+      background-position: -2560px 0;
+    }
+  }
+  
+  @keyframes bgscroll{
+    0%{
+      background-position: 0 30px;
+    }
+    
+    100%{
+      background-position: -2560px 30px ;
+    }
+  }
+
+h1{
+  font-size: 48px;
+  display: block;
+  text-align: center;
+  top: 10vh;
+  font-weight: bold;
+}
+
+main img.load_syozi_left,
+main img.load_syozi_right{
+  width: 100%;
+}
+
+main img.load_syozi_left{
+  left: -50%;
+  transform: translate(0%, 0%);
+}
+
+main img.load_syozi_right{
+  right: 50%;
+  transform: translate(100%, 0%);
+}
+
+main img.syozi_left,
+main img.syozi_right{
+  display: none;
+}
+
+@keyframes leftoutshozi1{
+  100%{
+    left: -100%;
+  }
+}
+
+@keyframes rightoutshozi1{
+  100%{
+    right: 0%;
+  }
+}
+
+.hurin-suzu {
+    margin-left: 0;
+}
+
+.search_container{
+  /* position: relative; */
+  top: 45vh;
+  left: 0;
+  right: 0;
+  width: 80%;
+  transform: translate(0%, 0%);
+  margin: auto;
+  font-size: 20px;
+}
+
+main .saku{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 350px;
+}
+
+main .div_ches{
+  position: fixed;
+  bottom: 0%;
+  left: 25%;
+  transform: translate(-25%, 10%);
+}

@@ -4,7 +4,7 @@ html {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    min-width: 1280px;
+    min-width: 380px;
   }
 
 body{
@@ -157,31 +157,27 @@ main img.syozi_left,
 main img.syozi_right,
 main img.load_syozi_left,
 main img.load_syozi_right{
+  position: fixed;
   width: 25%;
   height: 100vh;
-  /* min-width: 30%; */
 }
 
 main img.syozi_left{
-  position: absolute;
   left: 0px;
   z-index: 9;
 }
 
 main img.syozi_right{
-  position: absolute;
   right: 0px;
   z-index: 9;
 }
 
 main img.load_syozi_left{
-  position: absolute;
   left: calc(25vw);
   z-index: 10;
 }
 
 main img.load_syozi_right{
-  position: absolute;
   right: calc(25vw);
   z-index: 10;
 }

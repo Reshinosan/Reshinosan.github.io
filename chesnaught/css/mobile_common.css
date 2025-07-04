@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+main{
+    background: url('../images/bg_mobile.jpg');
+    background-size: auto 100%;
+}
+
+
+.menulist{
+  display: flex;
+  justify-content: space-around;
+  flex: 2;
+  flex-wrap: wrap;
+  bottom: 0;
+}
+
+.menulist li{
+    width: 49%;
+    border-left: 0px solid #ddd ;
+}
+
+.menulist li:nth-child(2n-1){
+  border-right: 1px solid #ddd ;
+}
+
+.menulist li a{
+    font-size: 25px;
+}
+
+@-webkit-keyframes bgscroll{
+    0%{
+      background-position: 0 0;
+    }
+    
+    100%{
+      background-position: -2560px 0;
+    }
+  }
+  
+  @keyframes bgscroll{
+    0%{
+      background-position: 0 30px;
+    }
+    
+    100%{
+      background-position: -2560px 30px ;
+    }
+  }
+
+h1{
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  top: 20%;
+  font-weight: bold;
+}
+
+main img.load_syozi_left{
+  width: 100%;
+  left: 0;
+}
+
+main img.syozi_left,
+main img.syozi_right,
+main img.load_syozi_right{
+  display: none;
+}
+
+@keyframes leftoutshozi1{
+  100%{
+    left: -100%;
+  }
+}
+
+.hurin-suzu {
+    margin-left: 0;
+}
+
+.search_container{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  transform: translate(0%, -50%);
+  margin: auto;
+  font-size: 16px;
+}
+
+main .saku{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+}
+
+main .div_ches{
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  transform: translate(-25%, 10%);
+}
+
+main .div_ches img{
+  width: 150%;
+}
