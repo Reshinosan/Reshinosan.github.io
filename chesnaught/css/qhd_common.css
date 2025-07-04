@@ -1,5 +1,10 @@
 main{
-    background: url('../images/bg_qhd.jpg') 90% 0%;
+    background: url('../images/bg_qhd.jpg');
+    background-size: auto 100%;
+}
+
+.menulist li a{
+    font-size: 50px;
 }
 
 @-webkit-keyframes bgscroll{
