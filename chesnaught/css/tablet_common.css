@@ -8,7 +8,7 @@ html {
   }
 
 main{
-    background: url('../images/bg_mobile.jpg');
+    background: url('../images//Summer/bg_mobile.jpg');
     background-size: auto 100%;
 }
 
@@ -98,15 +98,18 @@ main img.syozi_right{
     margin-left: 0;
 }
 
+.form_area{
+  top: 25vh;
+}
+
 .search_container{
-  /* position: relative; */
-  top: 45vh;
-  left: 0;
-  right: 0;
-  width: 80%;
-  transform: translate(0%, 0%);
-  margin: auto;
   font-size: 20px;
+  width: 80%;
+}
+
+.icon_links{
+  margin: 50px 0 ;
+  width: 100%;
 }
 
 main .saku{
@@ -122,3 +125,7 @@ main .div_ches{
   left: 25%;
   transform: translate(-25%, 10%);
 }
+
+    .sp{
+        display: none;
+    }

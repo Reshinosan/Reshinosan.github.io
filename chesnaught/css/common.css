@@ -95,6 +95,10 @@ h1{
     display: inline;
 }
 
+.menulist li a .niceclass1.mikansei{
+    text-decoration: line-through;
+}
+
 .menulist li a:hover{
     letter-spacing: 6px;
 }
@@ -110,7 +114,7 @@ main{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('../images/bg_fhd.jpg');
+    background: url('../images/Summer/bg_fhd.jpg');
     background-size: auto 100%;
     -webkit-animation: bgscroll 150s linear infinite;
     animation: bgscroll 150s linear infinite;
@@ -134,23 +138,6 @@ main{
   100%{
     background-position: -1920px 30px ;
   }
-}
-
-main .bg-sea{
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(#1f68c6, #1778d9, #83c5e5);
-  width: 100%;
-  height: 270px;
-  overflow: hidden;
-}
-
-main .bg-sea::after{
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(#6e829c, #1f68c6);
 }
 
 main img.syozi_left,
@@ -251,58 +238,33 @@ main .yane:after{
     background: #252421;
 }
 
-main .div_ches{
-  position: absolute;
-  z-index: 7;
-  margin: auto auto 0 auto;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, 10%);
-}
-
-main .model_ches{
-  position: relative;
-  z-index: 2;
-}
-
-main .model_ches_hand{
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  animation-name: angle_hand;
-  animation-duration: 2.5s;
-  animation-iteration-count:infinite;
-  animation-timing-function:ease-in-out;
-  animation-direction: alternate;
-}
-
-
-@keyframes angle_hand{
-  0%{
-      transform: rotate(1deg);
-  }
-  100%{
-      transform: rotate(8deg);
-  }
+.form_area{
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  z-index: 100;
+  top: 38vh;
+  margin: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 .search_container{
+  position: relative;
   box-sizing: border-box;
   background: rgba(51, 51, 51, 0.46);
-  position: absolute;
-  z-index: 100;
-  top: 43vh;
-  left: 50%;
+  margin: auto 50px;
   border: 1px solid #bbb;
   padding: 3px 5px;
   border-radius: 50px;
   height: 2.3em;
-  width: 500px;
+  width: 40%;
+  min-width: 300px;
   overflow: hidden;
   font-size: 20px;
   color: #333;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   box-shadow: 1px 1px 5px 1px #555;
 }
 
@@ -320,218 +282,45 @@ main .model_ches_hand{
 }
 
 .search_container input[type="submit"] {
+  position: absolute;
+  top: 0px;
+  right: 5px;
   cursor: pointer;
   font-family: FontAwesome;
   font-size: 1.3em;
   border: none;
   background: none;
   color: #fff;
-  position: absolute;
   width: 2em;
   height: 1.75em;
-  right: 5px;
-  top: 0px;
   outline: none;
 }
 
-.hurin-suzu {
-    position: relative;
-    width: 150px;
-    margin-left: 33%;
-    z-index: 1;
-    animation-name: suzuanimation;
-    animation-duration: 10s;
-    animation-iteration-count:infinite;
-    animation-timing-function:ease-in-out;
-    animation-direction: alternate;
-}
-  
-.hurin-suzu .suzu-circle {
-    width: 100px;
-    height: 80px;
-    background: linear-gradient(#aab35b, #ffcdcd00);
-    border-radius: 40% 40% 40% 40% / 60% 60% 30% 30%;
-    position: relative;
-}
-  
-.hurin-suzu .suzu-circle::before {
-    width: 95px;
-    height: 15px;
-    content: '';
-    border: solid 3px #866c22;
-    border-radius: 50%;
-    display: inline-block;
-    margin: auto;
-    position: absolute;
-    bottom: 8px;
-    left: 0;
-    right: 0;
-}
-
-.suzu-huda {
-    width: 50px;
-    height: 200px;
-    background: #518f63;
-    margin: 0 auto;
-    position: relative;
-    transform: skew(-3deg, -5deg) translate(-30px);
-}
-  
-.suzu-huda::before {
-    width: 50px;
-    content: '';
-    border-top: 2px solid #866c22;
-    position: absolute;
-    top: -7px;
-    transform: rotate(93deg);
-}
-
-@keyframes suzuanimation{
-    0%{
-        transform: rotate(5deg);
-    }
-    100%{
-        transform: rotate(20deg);
-    }
-}
-
-/* ------------- ここから落ち葉 ------------- */
-
-.leaf {
-  position: absolute;
-  z-index: 0;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
+.icon_links{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 100px auto 0 auto;
+  width: 55%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.leaf li{
-  position: absolute;
-  list-style: none;
-  top: -50px;
-  background: #ffaf47;
-  border-radius: 0% 70%;
-  z-index: -1;
+.icon_links .link_cricles a{
+    background: #555555ad;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-@keyframes fall {
-  to {
-    top: 120%;
-  }
+.icon_links .link_cricles a:hover{
+    background: #b8b8b8be;
 }
 
-@keyframes sway1 {
-  from {
-    transform: translateX(0px) rotate(0deg);
-  }
-  to {
-    transform: translateX(200px) rotate(-45deg);
-  }
-}
-
-@keyframes sway2 {
-  from {
-    transform: translateX(200px) rotate(-45deg);
-  }
-  to {
-    transform: translateX(0px) rotate(0deg);
-  }
-}
-
-.leaf li:nth-child(1){
-  left: 0%;
-  top: -60px;
-  width: 60px;
-  height: 38px;
-  background-color: #ffbf00;
-  animation: fall 10s linear infinite,
-             sway1 3s ease-in-out infinite alternate;
-  animation-delay: 2s;
-}
-
-.leaf li:nth-child(2){
-  left: 5%;
-  top: -70px;
-  width: 50px;
-  height: 29px;
-  background-color: #992400;
-  animation: fall 15s linear infinite,
-             sway1 2s ease-in-out infinite alternate;
-  animation-delay: 8s;
-}
-
-.leaf li:nth-child(3){
-  left: 15%;
-  top: -50px;
-  width: 36px;
-  height: 20px;
-  background-color: #c2704e;
-  animation: fall 9s linear infinite,
-             sway1 3.5s ease-in-out infinite alternate;
-  animation-delay: 13s;
-}
-
-.leaf li:nth-child(4){
-  left: 30%;
-  top: -70px;
-  width: 51px;
-  height: 42px;
-  background-color: #ffbf00;
-  animation: fall 8s linear infinite,
-             sway2 4s ease-in-out infinite alternate;
-  animation-delay: 7s;
-}
-.leaf li:nth-child(5){
-  left: 40%;
-  top: -60px;
-  width: 46px;
-  height: 40px;
-  animation: fall 10s linear infinite,
-             sway1 4s ease-in-out infinite alternate;
-  animation-delay: 0s;
-}
-.leaf li:nth-child(6){
-  left: 55%;
-  top: -50px;
-  width: 54px;
-  height: 35px;
-  background-color: #631d08;
-  animation: fall 11s linear infinite,
-             sway2 3s ease-in-out infinite alternate;
-  animation-delay: 3s;
-}
-.leaf li:nth-child(7){
-  left: 65%;
-  top: -40px;
-  width: 46px;
-  height: 35px;
-  animation: fall 7s linear infinite,
-             sway2 3.5s ease-in-out infinite alternate;
-  animation-delay: 7s;
-}
-.leaf li:nth-child(8){
-  left: 50%;
-  top: -60px;
-  width: 43px;
-  height: 29px;
-  background-color: #c2704e;
-  animation: fall 7s linear infinite,
-             sway1 3s ease-in-out infinite alternate;
-  animation-delay: 3s;
-}
-.leaf li:nth-child(9){
-  left: 80%;
-  top: -70px;
-  width: 56px;
-  height: 35px;
-  animation: fall 10s linear infinite,
-             sway2 4s ease-in-out infinite alternate;
-  animation-delay: 4s;
+.icon_links a img{
+  max-width: 50px;
 }
 
 @media screen and (max-width: 420px){

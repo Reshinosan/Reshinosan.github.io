@@ -16,10 +16,11 @@
     <meta name="twitter:image" content="https://reshinosan.github.io/chesnaught/images/ogthumbnails.jpg" />
     <title>ぶりがろん！</title>
     <link href="./css/normalize.css" rel="stylesheet" />
-    <link href="./css/common.css?2025070203" rel="stylesheet" />
-    <link href="./css/qhd_common.css?2025070203" rel="stylesheet" media="screen and (min-width:2000px)" />
-    <link href="./css/tablet_common.css?2025070203" rel="stylesheet" media="screen and (max-width:1023px)" />
-    <link href="./css/mobile_common.css?2025070203" rel="stylesheet" media="screen and (max-width:480px)" />
+    <link href="./css/common.css?2025090501" rel="stylesheet" />
+    <link href="./css/qhd_common.css?2025090501" rel="stylesheet" media="screen and (min-width:2000px)" />
+    <link href="./css/tablet_common.css?2025090501" rel="stylesheet" media="screen and (max-width:1023px)" />
+    <link href="./css/mobile_common.css?2025090501" rel="stylesheet" media="screen and (max-width:480px)" />
+    <link href="./css/main_autumn.css?2025090501" rel="stylesheet" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,29 +38,53 @@
         <img class="syozi_right" src="./images/syouzi.jpg">
         <img class="load_syozi_left" src="./images/syouzi.jpg">
         <img class="load_syozi_right" src="./images/syouzi.jpg">
-        <div class="bg-sea"></div>
+        <!-- <div class="bg-sea"></div> -->
         <div class="saku"></div>
         <h1>また会えたね。おかえり。</h1>
         <div class="yane"></div>
-        <div class="div_ches">
-            <img src="./images/Chesnaught.png" class="model_ches" />
-            <img src="./images/Chesnaught_hand.png" class="model_ches_hand" />
+        <div class="main_autumn">
+            <div class="div_sci">
+                <img class="img_fros_main" src="./images/Autumn/scizor_main.webp">
+            </div>
+            <div class="div_fros">
+                <img class="img_fros_main" src="./images/Autumn/froslass_main.webp">
+                <img class="img_fros_sub" src="./images/Autumn/froslass_sub.webp">
+            </div>
         </div>
-        <div class="hurin-suzu">
-            <div class="suzu-circle"></div>
-            <div class="suzu-huda"></div>
+        <img class="bg_kouyou_left2 sp" src="./images/Autumn/kouyou2.png">
+        <img class="bg_kouyou_left" src="./images/Autumn/kouyou.png">
+        <img class="bg_kouyou_right sp" src="./images/Autumn/kouyou.png">
+        <ul class="leaf">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="form_area">
+            <form method="get" action="https://www.google.com/search" class="search_container" id="search_value" name="search_ches">
+                <input type="text" id="nyuryoku" size="" placeholder="">
+                <input type="hidden" id="harituke" name="q"  value="" />
+                <input type="submit" value="&#xf002" id="start_search">
+            </form>
+            <div class="icon_links">
+                <div class="link_cricles"><a href="https://deck.blue/"><img src="./images/icons1.png" style="width: 40px;"></a></div>
+                <div class="link_cricles"><a href="https://x.com/home"><img src="./images/icons2.png"></a></div>
+                <div class="link_cricles"><a href="https://www.youtube.com/"><img src="./images/icons3.png"></a></div>
+                <div class="link_cricles"><a href="https://www.nicovideo.jp/"><img src="./images/icons4.png"  style="width: 60px; max-width: 60px;"></a></div>
+                <div class="link_cricles"><a href="https://www.pokemoncenter-online.com/"><img src="https://www.pokemoncenter-online.com/on/demandware.static/Sites-POL-Site/-/default/dw18826bf5/images/common/logo.png"></a></div>
+            </div>
         </div>
-        <form method="get" action="https://www.google.com/search" class="search_container" id="search_value" name="search_ches">
-            <input type="text" id="nyuryoku" size="" placeholder="">
-            <input type="hidden" id="harituke" name="q"  value="" />
-            <input type="submit" value="&#xf002" id="start_search">
-        </form>
     </main>
     <ul class="menulist">
-        <li><a href="https://deck.blue/" class="animsition-link"><div class="niceclass1">Blue</div>sky</a></li>
-        <li><a href="https://x.com/home" class="animsition-link"><div class="niceclass1"></div>Twitter</a></li>
-        <li><a href="https://www.youtube.com/" class="animsition-link"><div class="niceclass1">You</div>Tube</a></li>
-        <li><a href="https://www.nicovideo.jp/" class="animsition-link"><div class="niceclass1"></div>niconico</a></li>
+        <li><a href="#" class="animsition-link"><div class="niceclass1 mikansei">Spring</div></a></li>
+        <li><a href="summer.html" class="animsition-link"><div class="niceclass1">Summer</div></a></li>
+        <li><a href="autumn.html" class="animsition-link"><div class="niceclass1">Autumn</div></a></li>
+        <li><a href="#" class="animsition-link"><div class="niceclass1 mikansei">Winter</div></a></li>
     </ul>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
